@@ -112,12 +112,28 @@ def game(rounds):
 
 
 if __name__ == "__main__":
-    rounds_choice = input("Welcome to the rock-paper-scissors game. Select the number of rounds you'd like to play: ")
-    try:
-        rounds_choice = int(rounds_choice)
-        if rounds_choice <= 0:
+    first_game = True
+    while True:
+        if first_game:
+            rounds_choice = input("Welcome to the rock-paper-scissors game. Select the number of rounds you'd like to play: ")
+        else:
+            rounds_choice = input("Select the number of rounds you'd like to play: ")
+        try:
+            rounds_choice = int(rounds_choice)
+            if rounds_choice <= 0:
+                rounds_choice = bad_choice(rounds_choice)
+        except:
             rounds_choice = bad_choice(rounds_choice)
-    except:
-        rounds_choice = bad_choice(rounds_choice)
 
-    game(rounds_choice)
+        game(rounds_choice)
+        first_game = False
+        play_again = input("Play again? Y/N: ")
+        if play_again.lower() == "y":
+            print("Starting another game")
+            sleep(2)
+            os.system('cls' if os.name == 'nt' else 'clear')
+            continue
+        else:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("Thanks for playing :>\nGoodbye")
+            break
