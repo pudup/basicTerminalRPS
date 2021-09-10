@@ -1,5 +1,5 @@
 # rock-paper-scissors
-Terminal RPS
+Terminal RockPaperScissors
 
 
 
