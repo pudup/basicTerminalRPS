@@ -97,7 +97,7 @@ def game(rounds):
 
         i += 1
         print(f"Current Scores\nYOU: {scores['You']}\nCOMPUTER: {scores['Computer']}")
-        sleep(2)
+        sleep(3)
         os.system('cls' if os.name == 'nt' else 'clear')
 
     print(f"Final Scores\nYOU: {scores['You']}\nCOMPUTER: {scores['Computer']}")
@@ -113,6 +113,7 @@ def game(rounds):
 
 if __name__ == "__main__":
     first_game = True
+    os.system('cls' if os.name == 'nt' else 'clear')
     while True:
         if first_game:
             rounds_choice = input("Welcome to the rock-paper-scissors game. Select the number of rounds you'd like to play: ")
@@ -130,7 +131,7 @@ if __name__ == "__main__":
         play_again = input("Play again? Y/N: ")
         if play_again.lower() == "y":
             print("Starting another game")
-            sleep(2)
+            sleep(3)
             os.system('cls' if os.name == 'nt' else 'clear')
             continue
         else:
