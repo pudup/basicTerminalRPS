@@ -1,4 +1,3 @@
-
 rock = '''
     _______
 ---'   ____)
@@ -25,3 +24,4 @@ scissors = '''
       (____)
 ---.__(___)
 '''
+images = [rock, paper, scissors]
