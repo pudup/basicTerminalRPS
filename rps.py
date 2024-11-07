@@ -138,6 +138,3 @@ if __name__ == "__main__":
                 exit()
             else:
                 print("Couldn't understand. Please enter 'Y' for yes and 'N' for no")
-
-
-# I shall fix this code now
