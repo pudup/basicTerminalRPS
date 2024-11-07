@@ -7,7 +7,7 @@ if __name__ == "__main__":
     while keep_playing:
         rps.clrscr()
         print("Welcome to the rock-paper-scissors game")
-        rps.rounds = rps.round_choice()
+        rps.round_choice()
         rps.game()
         play_again = input("Play again? Y/N: ")
         if play_again.lower() == "y":

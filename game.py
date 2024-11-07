@@ -31,7 +31,7 @@ class RockPaperScissors:
             except ValueError:
                 print("I can't understand text :<")
                 continue
-        return r
+        self.rounds = r
 
     def rps_choice(self):
         player_choice = None
