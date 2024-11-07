@@ -61,7 +61,7 @@ def game(rounds):
         while True:
             try:
                 player_choice = int(input(f"Round {i + 1}\nDo you want to choose 0-Rock, 1-Paper, or 2-Scissors?\n#"))
-                if player_choice > 2:
+                if player_choice > 2 or player_choice < 0:
                     print("Invalid choice. Only values between 0-2")
                     continue
                 else:
@@ -70,11 +70,8 @@ def game(rounds):
                 print("Only numbers between 0-2 are accepted.")
                 continue
         images = [rock, paper, scissors]
-        if player_choice > 2:
-            print("Player choice is invalid")
-        else:
-            print("Player choice:")
-            print(images[player_choice])
+        print("Player choice:")
+        print(images[player_choice])
 
         # Generate Computer Choice and print it
         computer_choice = random.randint(0, 2)
