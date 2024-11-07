@@ -5,4 +5,4 @@ Terminal RockPaperScissors
 
 Run using
 
-```python3 rps.py```
+```python3 main.py```
