@@ -125,15 +125,19 @@ if __name__ == "__main__":
 
         game(rounds_choice)
         first_game = False
-        play_again = input("Play again? Y/N: ")
-        if play_again.lower() == "y":
-            print("Starting another game")
-            sleep(5)
-            os.system('cls' if os.name == 'nt' else 'clear')
-            continue
-        else:
-            os.system('cls' if os.name == 'nt' else 'clear')
-            print("Thanks for playing :>\nGoodbye")
-            break
+        while True:
+            play_again = input("Play again? Y/N: ")
+            if play_again.lower() == "y":
+                print("Starting another game")
+                sleep(5)
+                os.system('cls' if os.name == 'nt' else 'clear')
+                break
+            elif play_again.lower() == "n":
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("Thanks for playing :>\nGoodbye")
+                exit()
+            else:
+                print("Couldn't understand. Please enter 'Y' for yes and 'N' for no")
+
 
 # I shall fix this code now
