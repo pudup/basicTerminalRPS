@@ -1,34 +1,7 @@
 import random
 from time import sleep
 import os
-
-
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
-
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
-
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
+from resources.ascii import rock, paper, scissors
 
 
 def bad_choice(arg):
@@ -50,6 +23,7 @@ def bad_choice(arg):
             print("I can't understand text :<")
             continue
     return r
+
 
 def game(rounds):
     scores = {
@@ -94,7 +68,6 @@ def game(rounds):
             print("You lose")
             scores["Computer"] += 1
 
-
         i += 1
         print(f"Current Scores\nYOU: {scores['You']}\nCOMPUTER: {scores['Computer']}")
         sleep(5)
@@ -109,14 +82,13 @@ def game(rounds):
         print("It's a Draw. Boring")
 
 
-
-
 if __name__ == "__main__":
     first_game = True
     os.system('cls' if os.name == 'nt' else 'clear')
     while True:
         if first_game:
-            rounds_choice = input("Welcome to the rock-paper-scissors game. Select the number of rounds you'd like to play: ")
+            rounds_choice = input(
+                "Welcome to the rock-paper-scissors game. Select the number of rounds you'd like to play: ")
         else:
             rounds_choice = input("Select the number of rounds you'd like to play: ")
         try:
