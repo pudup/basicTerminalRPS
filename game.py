@@ -48,8 +48,8 @@ class RockPaperScissors:
         return player_choice
 
     def game(self):
-        if not self.rounds:
-            raise ValueError("Rounds must be a positive integer")
+        self.reset()
+        self.round_choice()
         while self.current_round <= self.rounds:
             player_choice = self.rps_choice()
             print("Player Choice:")
